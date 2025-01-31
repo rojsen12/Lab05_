@@ -1,0 +1,31 @@
+.blog-item {
+    display: flex; 
+    flex-direction: row; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+  }
+  
+  .blog-item img {
+    max-width: 100%; 
+    height: auto; 
+    flex-shrink: 0; 
+  }
+  
+  .blog-item .blog-content {
+    flex-grow: 1; 
+    margin-left: 20px; 
+  }
+  
+  .blog-item h2 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+  }
+  
+  .blog-item p {
+    font-size: 16px; 
+    color: #666; 
+  }
+  

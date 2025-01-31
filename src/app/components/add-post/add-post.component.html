@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Dodaj nowy post</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="title">Tytuł</label>
+            <input type="text" id="title" name="title" [(ngModel)]="newPost.title" class="form-control"
+                placeholder="Tytuł posta" required />
+        </div>
+
+        <div class="form-group">
+            <label for="text">Zawartość</label>
+            <textarea id="text" name="text" [(ngModel)]="newPost.text" class="form-control"
+                placeholder="Zawartość posta" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="image">URL</label>
+            <input type="text" id="image" name="image" [(ngModel)]="newPost.image" class="form-control"
+                placeholder="Wklej link do zdjęcia (URL)" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Dodaj Post</button>
+    </form>
+</div>

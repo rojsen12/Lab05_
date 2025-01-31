@@ -1,0 +1,16 @@
+<div class="comment-form">
+    <label for="nick">Nick:</label>
+    <input type="text" id="nick" [(ngModel)]="newNick" placeholder="Wpisz swój nick" />
+  
+    <label for="comment">Komentarz:</label>
+    <textarea id="comment" [(ngModel)]="newComment" placeholder="Wpisz komentarz"></textarea>
+  
+    <button (click)="addComment()">Dodaj komentarz</button>
+  </div>
+  
+  <div class="comments-list">
+    <div *ngFor="let comment of comments">
+      <p><strong>{{ comment.nick }}:</strong> {{ comment.text }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,7 @@
+<div class="search-container">
+    <app-search-bar (name)="getName($event)"></app-search-bar>
+    <button (click)="refreshPosts()" class="btn btn-primary">Odśwież listę postów</button>
+  </div>  
+<blog [filterText]="filterText"></blog>
+
+<button *ngIf="showScrollButton" class="scroll-to-top-btn" (click)="scrollToTop()">⬆️ Powróć na górę</button>

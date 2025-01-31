@@ -1,0 +1,29 @@
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom-checkbox {
+    display: none; 
+}
+
+img {
+    height: 256px;
+    width: 256px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+
+.zoom-checkbox:checked + img {
+    transform: scale(2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}

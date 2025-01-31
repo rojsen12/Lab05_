@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let item of items$ | async | filter:filterText">
+            <blog-item [post]="item"
+            [image]="item.image"
+            [text]="item.text"
+            [id]="item.id">
+          </blog-item>
+          <comments-section [postId]="item._id"></comments-section>
+        </div>
+    </div>
+    <div *ngIf="(items$ | async | filter:filterText)?.length == 0" class="alert alert-warning text-center mt-3">
+        Brak wyników pasujących do wyszukiwania.
+      </div>
+    
+
+    <div class="mt-6">
+        <h3>Galeria Zdjęć</h3>
+        <app-gallery-list></app-gallery-list>
+    </div>
+</div>
